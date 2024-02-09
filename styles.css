@@ -16,7 +16,14 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'helvetica_neuebold';
+    src: url('assets/imgs/COD-LP-Assets/Fonts/Webfonts/helveticaneuebold-webfont.woff2') format('woff2'),
+         url('assets/imgs/COD-LP-Assets/Fonts/Webfonts/helveticaneuebold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
 @font-face {
     font-family: 'dinmediumalternate';
@@ -66,6 +73,7 @@ box-sizing: border-box;
 .bonus-text {
     padding: 0 1rem;
 }
+
 .bonus-text p {
     font-family: "dinboldalternate" ;
     font-size: 1.5rem;
@@ -113,13 +121,19 @@ color: white;
 
 .bonus-img {
     width: 60%;
+    z-index: 10;
 }
 .bonus-text {
     text-align: center;
     background-color: black;
 }
 
+.charm-font {
+    font-family: "helvetica_neuebold";
+    letter-spacing: -1px;
+}
 .bonus-text h2 {
+ 
     font-size: 2.3rem;
     font-weight: 900;
     margin-bottom: 15px;
@@ -146,7 +160,15 @@ color: white;
 .bars-container {
     text-align: center;
 }
+.landing-video div {
+    border-radius: 10px;
+  
+}
+.video-cont {
+    z-index: 10;
+}
 .landing-video {
+    position: relative;
     background-image: url("assets/imgs/COD-LP-Assets/Background-Middle.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -236,7 +258,7 @@ color: white;
 
 .footer-text {
     color: white;
-    font-family: "dinboldalternate" ;
+    font-family: "dinregularalternate" ;
     text-align: center;
  
     margin: auto;
@@ -246,7 +268,7 @@ color: white;
 }
 .copy {
     color: white;
-    font-family: "dinboldalternate" ;
+    font-family: "dinregularalternate" ;
 margin-bottom: 15px;
     font-size: 1.4rem;
  
@@ -282,7 +304,7 @@ margin-bottom: 15px;
     }
     .landing-logo {
         margin: auto;
-        margin-top: 25px;
+        margin-top: 55px;
         max-width: 750px;
     }
     .cod-logo img {
@@ -310,9 +332,10 @@ margin-bottom: 15px;
     }
 
     .cod-soldier {
-        background: rgba(0, 0, 0, 0.35) url("assets/imgs/COD-LP-Assets/Hero_Foregroundopacity.png");
+        position: relative;
+ background: rgba(0, 0, 0, 0.35) url("assets/imgs/COD-LP-Assets/Hero_Foreground.png");
  background-repeat: no-repeat;
-        background-position: calc(100% + 250px) top;
+background-position: calc(100% + 250px) top;
     }
     .cod-soldier img {
        
@@ -369,6 +392,10 @@ margin-bottom: 15px;
     }
     .slider-container {
         height: 790px;
+    }
+    .landing-slider {
+        margin-top: 200px !important;
+        margin-bottom: 100px;
     }
 }
 .pill-container {
@@ -468,10 +495,28 @@ opacity: .7;
 .middle-bg {
     background-image: url("assets/imgs/COD-LP-Assets/Background-Bottom.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 90%;
     background-position: center;
 }
 
 .gold-slide {
    visibility: hidden;
    }
+
+   .gradient-strip {
+    height: 285px;
+    width: 100%;
+    right: 0;
+    position: absolute;
+    bottom: -3px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 1));
+   
+}
+
+
+
+@media screen and (min-width:1950px) {
+    .cod-soldier {
+        background-position: calc(100% - 150px) top;
+    }
+}

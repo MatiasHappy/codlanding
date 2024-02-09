@@ -32,12 +32,13 @@
         </div>
     </div>
         <div class="cod-soldier">
+            <div class="gradient-strip"></div>
             <div class="cod-cont soldier-row">
                 <div class="bonus-img">
                     <img src="assets/imgs/COD-LP-Assets/charm.png" alt="">
                 </div>
-                <div class="bonus-text pc">
-                    <h2>EXCLUSIVE BONUS</h2>
+                <div class="bonus-text  pc">
+                    <h2 class="charm-font">EXCLUSIVE BONUS</h2>
                     <p>Get an In-Game Weapon Charm
                         Only available when you purchase a gold or silver bar</p>
                     <a href="" class="red-border">Get Yours Today</a>
@@ -60,6 +61,7 @@
 
                 </div>
             </div>
+            <div class="gradient-strip"></div>
         </div>
 
         <div class="bars-container">
@@ -313,8 +315,10 @@ $('.gold-slider').slick({
                 var silverDistanceFromTop = silverBarsOffset - scrollTop;
             
                 // Calculate the opacity for gold bars based on the distance from the top of the viewport
-                var goldOpacity = Math.max(0, Math.min(1, (screenHeight - goldDistanceFromTop * 1.5) / screenHeight));
             
+
+                var goldOpacity = Math.max(0, Math.min(1, ((screenHeight + 800)  - goldDistanceFromTop  * 2.1) / screenHeight));
+                
                 // Calculate the opacity for silver bars based on the distance from the top of the viewport
                 var silverOpacity = 1; // Silver bars start at 100% opacity
                 
